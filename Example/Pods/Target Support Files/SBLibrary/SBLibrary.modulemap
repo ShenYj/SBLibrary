@@ -1,0 +1,6 @@
+framework module SBLibrary {
+  umbrella header "SBLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

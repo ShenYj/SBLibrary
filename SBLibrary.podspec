@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SBLibrary'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SBLibrary.'
+  s.summary          = 'A lightweight Basic library of Swift.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,9 +28,12 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/ShenYj/SBLibrary.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'SBLibrary/Classes/**/*'
+  s.ios.deployment_target = '10.0'
+  s.swift_versions = ['5.1', '5.2', '5.3']
+  s.requires_arc = true
+  s.frameworks = 'Foundation'
+  
+  s.source_files = ['SBLibrary/Classes/Core/*.swift', 'SBLibrary/Classes/Core/Protocol/*.swift']
   
   # s.resource_bundles = {
   #   'SBLibrary' => ['SBLibrary/Assets/*.png']

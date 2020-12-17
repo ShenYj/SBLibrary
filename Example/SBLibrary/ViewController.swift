@@ -7,18 +7,38 @@
 //
 
 import UIKit
+import SBLibrary
 
-class ViewController: UIViewController {
+fileprivate let ExampleTableViewCellIdentifier = "ExampleTableViewCellIdentifier"
 
+class ViewController: UIViewController, ExampleDataSourceProtocol {
+    
+    typealias ExampleController = SandboxReadableExampleController
+    
+    @IBOutlet weak var exampleTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        exampleTableView.register(UITableViewCell.self, forCellReuseIdentifier: ExampleTableViewCellIdentifier)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: UITableViewDataSource
+    func numberOfSections(in tableView: UITableView) -> Int { sectionCount }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { self[section] }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ExampleTableViewCellIdentifier, for: indexPath)
+        cell.textLabel?.text = self[indexPath.section, indexPath.row]
+        return cell
+    }
+    
+    // MARK: UITableViewDelegate
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? { self[section] }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(self[indexPath.section, indexPath.row], animated: true)
+    }
+}
