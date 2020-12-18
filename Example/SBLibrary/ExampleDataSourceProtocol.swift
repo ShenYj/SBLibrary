@@ -11,7 +11,7 @@ import UIKit
 
 internal protocol ExampleDataSourceProtocol {
     
-    associatedtype ExampleController: UIViewController
+    associatedtype Controller
     
     /// example 数据源
     var exampleDatasources: [ExampleDataSource] { get }
@@ -28,7 +28,7 @@ internal protocol ExampleDataSourceProtocol {
     subscript(section: Int) -> Int { get }
     
     /// 获取指定`section`的指定`rows`获得 example 控制器
-    subscript(section: Int, row: Int) -> ExampleController { get }
+    subscript(section: Int, row: Int) -> Controller { get }
 }
 
 internal extension ExampleDataSourceProtocol {
@@ -48,7 +48,8 @@ internal extension ExampleDataSourceProtocol {
             ExampleSections(sectionTitle: "SBL-UIKit 扩展",
                             rows:
                                 [
-                                    
+                                    ExampleRows(rowTitle: "ExitApplicationable协议", icon: "", example: .exitapplication(exampleController: UIStoryboard.init(name: "ExitApplicationableExample", bundle: nil).instantiateInitialViewController()! as! ExitApplicationableExampleController)),
+                                    ExampleRows(rowTitle: "StringConvertible协议", icon: "", example: .stringconvertible(exampleController: UIStoryboard.init(name: "StringConvertibleExample", bundle: nil).instantiateInitialViewController()! as! StringConvertibleExampleController))
                                 ]
             ),
             ExampleSections(sectionTitle: "SBL-TBD",
@@ -72,9 +73,11 @@ internal extension ExampleDataSourceProtocol {
     subscript(section: Int) -> Int { exampleDatasources[section].rows.count }
     
     /// 获取指定`section`的指定`rows`获得 example 控制器
-    subscript(section: Int, row: Int) -> ExampleController {
+    subscript(section: Int, row: Int) -> Controller {
         switch self[section, row].example {
-        case let .sandboxable(exampleController):       return exampleController as! Self.ExampleController
+        case let .sandboxable(exampleController):           return exampleController as! Self.Controller
+        case let .exitapplication(exampleController):       return exampleController as! Self.Controller
+        case let .stringconvertible(exampleController):     return exampleController as! Self.Controller
         }
     }
 }

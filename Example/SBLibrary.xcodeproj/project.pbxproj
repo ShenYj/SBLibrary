@@ -16,10 +16,15 @@
 		A0B8E2DDC593EF1CCEF460A2 /* Pods_SBLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10ADFC3F54969A7A233E5D8C /* Pods_SBLibrary_Example.framework */; };
 		F7F7DADB258B05170072E18F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F7DADA258B05170072E18F /* Launch Screen.storyboard */; };
 		F7F7DB3F258B4E290072E18F /* SandboxReadableExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F7DB3E258B4E290072E18F /* SandboxReadableExample.storyboard */; };
-		F7F7DB43258B4E7A0072E18F /* SandboxReadableExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DB42258B4E7A0072E18F /* SandboxReadableExampleController.swift */; };
 		F7F7DB4C258B83C10072E18F /* ExampleDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DB4B258B83C10072E18F /* ExampleDataSourceProtocol.swift */; };
 		F7F7DB52258B9C500072E18F /* SandboxReadableExampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DB51258B9C500072E18F /* SandboxReadableExampleProtocol.swift */; };
 		F7F7DB56258B9FD00072E18F /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DB55258B9FD00072E18F /* Example.swift */; };
+		F7F7DC22258C636D0072E18F /* ExitApplicationableExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F7DC21258C636D0072E18F /* ExitApplicationableExample.storyboard */; };
+		F7F7DC28258C6E460072E18F /* ExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DC27258C6E460072E18F /* ExampleController.swift */; };
+		F7F7DC54258C98EC0072E18F /* StringConvertibleExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F7DC53258C98EC0072E18F /* StringConvertibleExample.storyboard */; };
+		F7F7DC65258C9BFA0072E18F /* StringConvertibleExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DC4F258C98DF0072E18F /* StringConvertibleExampleController.swift */; };
+		F7F7DC66258C9BFA0072E18F /* ExitApplicationableExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DC1B258C63470072E18F /* ExitApplicationableExampleController.swift */; };
+		F7F7DC67258C9BFA0072E18F /* SandboxReadableExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DB42258B4E7A0072E18F /* SandboxReadableExampleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		F7F7DB4B258B83C10072E18F /* ExampleDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleDataSourceProtocol.swift; sourceTree = "<group>"; };
 		F7F7DB51258B9C500072E18F /* SandboxReadableExampleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxReadableExampleProtocol.swift; sourceTree = "<group>"; };
 		F7F7DB55258B9FD00072E18F /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		F7F7DC1B258C63470072E18F /* ExitApplicationableExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExitApplicationableExampleController.swift; sourceTree = "<group>"; };
+		F7F7DC21258C636D0072E18F /* ExitApplicationableExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExitApplicationableExample.storyboard; sourceTree = "<group>"; };
+		F7F7DC27258C6E460072E18F /* ExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleController.swift; sourceTree = "<group>"; };
+		F7F7DC4F258C98DF0072E18F /* StringConvertibleExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertibleExampleController.swift; sourceTree = "<group>"; };
+		F7F7DC53258C98EC0072E18F /* StringConvertibleExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StringConvertibleExample.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +124,11 @@
 		607FACD21AFB9204008FA782 /* Example for SBLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				F7F7DB3D258B4E1B0072E18F /* SandboxReadableExample */,
+				F7F7DC59258C9A250072E18F /* Examples */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				F7F7DB4B258B83C10072E18F /* ExampleDataSourceProtocol.swift */,
 				F7F7DB55258B9FD00072E18F /* Example.swift */,
+				F7F7DC27258C6E460072E18F /* ExampleController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				F7F7DADA258B05170072E18F /* Launch Screen.storyboard */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -180,6 +191,34 @@
 				F7F7DB51258B9C500072E18F /* SandboxReadableExampleProtocol.swift */,
 			);
 			path = SandboxReadableExample;
+			sourceTree = "<group>";
+		};
+		F7F7DC1A258C63380072E18F /* ExitApplicationableExample */ = {
+			isa = PBXGroup;
+			children = (
+				F7F7DC21258C636D0072E18F /* ExitApplicationableExample.storyboard */,
+				F7F7DC1B258C63470072E18F /* ExitApplicationableExampleController.swift */,
+			);
+			path = ExitApplicationableExample;
+			sourceTree = "<group>";
+		};
+		F7F7DC4E258C98C50072E18F /* StringConvertibleExample */ = {
+			isa = PBXGroup;
+			children = (
+				F7F7DC53258C98EC0072E18F /* StringConvertibleExample.storyboard */,
+				F7F7DC4F258C98DF0072E18F /* StringConvertibleExampleController.swift */,
+			);
+			path = StringConvertibleExample;
+			sourceTree = "<group>";
+		};
+		F7F7DC59258C9A250072E18F /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				F7F7DC4E258C98C50072E18F /* StringConvertibleExample */,
+				F7F7DC1A258C63380072E18F /* ExitApplicationableExample */,
+				F7F7DB3D258B4E1B0072E18F /* SandboxReadableExample */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +309,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F7DC22258C636D0072E18F /* ExitApplicationableExample.storyboard in Resources */,
 				F7F7DADB258B05170072E18F /* Launch Screen.storyboard in Resources */,
 				F7F7DB3F258B4E290072E18F /* SandboxReadableExample.storyboard in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				F7F7DC54258C98EC0072E18F /* StringConvertibleExample.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,8 +417,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F7DC65258C9BFA0072E18F /* StringConvertibleExampleController.swift in Sources */,
+				F7F7DC66258C9BFA0072E18F /* ExitApplicationableExampleController.swift in Sources */,
+				F7F7DC67258C9BFA0072E18F /* SandboxReadableExampleController.swift in Sources */,
 				F7F7DB52258B9C500072E18F /* SandboxReadableExampleProtocol.swift in Sources */,
-				F7F7DB43258B4E7A0072E18F /* SandboxReadableExampleController.swift in Sources */,
+				F7F7DC28258C6E460072E18F /* ExampleController.swift in Sources */,
 				F7F7DB56258B9FD00072E18F /* Example.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

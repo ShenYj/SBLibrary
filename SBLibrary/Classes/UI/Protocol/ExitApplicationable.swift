@@ -1,5 +1,5 @@
 //
-//  String+sbl.swift
+//  ExitApplicationable.swift
 //  SBLibrary
 //
 //  Created by ShenYj on 2020/12/18.
@@ -24,6 +24,30 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-extension String: StringConvertible { }
+public protocol ExitApplicationable {
+    
+    /// 退出当前App
+    ///
+    /// - Note: 通过`ExitApplicationable`协议为`UIApplication`实现退出App功能
+    ///         考虑到这并非是一个常见的需求, 所以默认只为`UIApplication`这个类提供了默认支持
+    ///         当然只要你想, 也可以让任意目标遵循该协议, 从而获得这个功能
+    ///
+    static func exitApplication(withDuration duration: Double) -> Void
+}
+
+public extension ExitApplicationable {
+    
+    /// 退出当前App
+    ///
+    /// - Note: 退出当前App, 默认持续时长 `0.5 秒`
+    ///
+    static func exitApplication(withDuration duration: Double = 0.5) {
+        UIView.animate(withDuration: duration) {
+            UIApplication.shared.appKeyWindow?.alpha = 0.0
+        } completion: { (finished) in
+            exit(0)
+        }
+    }
+}

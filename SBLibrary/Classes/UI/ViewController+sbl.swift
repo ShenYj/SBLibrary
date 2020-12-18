@@ -1,5 +1,5 @@
 //
-//  String+sbl.swift
+//  ViewController+sbl.swift
 //  SBLibrary
 //
 //  Created by ShenYj on 2020/12/18.
@@ -24,6 +24,6 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import Foundation
+import UIKit
 
-extension String: StringConvertible { }
+extension UIViewController {  }

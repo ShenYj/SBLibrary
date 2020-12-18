@@ -13,7 +13,7 @@ fileprivate let ExampleTableViewCellIdentifier = "ExampleTableViewCellIdentifier
 
 class ViewController: UIViewController, ExampleDataSourceProtocol {
     
-    typealias ExampleController = SandboxReadableExampleController
+    typealias Controller = ExampleController
     
     @IBOutlet weak var exampleTableView: UITableView!
     

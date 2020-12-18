@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SBLibrary'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'A lightweight Basic library of Swift.'
 
 # This description is used to generate tags and improve search results.
@@ -29,13 +29,18 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
-  s.default_subspec = "Core"
+  s.default_subspec = ['Core', 'UI']
   s.swift_versions = ['5.1', '5.2', '5.3']
   s.requires_arc = true
   
   s.subspec "Core" do |ss|
     ss.source_files = ['SBLibrary/Classes/Core/*.swift', 'SBLibrary/Classes/Core/Protocol/*.swift']
     ss.framework  = "Foundation"
+  end
+  
+  s.subspec "UI" do |ss|
+    ss.source_files = ['SBLibrary/Classes/UI', 'SBLibrary/Classes/UI/Protocol']
+    ss.framework  = "UIKit"
   end
   
   # s.resource_bundles = {

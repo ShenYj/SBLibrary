@@ -32,3 +32,4 @@ extension SandboxReadableExampleController {
     }
 }
 
+extension SandboxReadableExampleController: ExampleController { }
