@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SBLibrary'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A lightweight Basic library of Swift.'
 
 # This description is used to generate tags and improve search results.
@@ -29,11 +29,14 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
+  s.default_subspec = "Core"
   s.swift_versions = ['5.1', '5.2', '5.3']
   s.requires_arc = true
-  s.frameworks = 'Foundation'
   
-  s.source_files = ['SBLibrary/Classes/Core/*.swift', 'SBLibrary/Classes/Core/Protocol/*.swift']
+  s.subspec "Core" do |ss|
+    ss.source_files = ['SBLibrary/Classes/Core/*.swift', 'SBLibrary/Classes/Core/Protocol/*.swift']
+    ss.framework  = "Foundation"
+  end
   
   # s.resource_bundles = {
   #   'SBLibrary' => ['SBLibrary/Assets/*.png']
