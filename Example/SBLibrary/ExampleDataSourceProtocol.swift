@@ -49,7 +49,8 @@ internal extension ExampleDataSourceProtocol {
                             rows:
                                 [
                                     ExampleRows(rowTitle: "ExitApplicationable协议", icon: "", example: .exitapplication(exampleController: UIStoryboard.init(name: "ExitApplicationableExample", bundle: nil).instantiateInitialViewController()! as! ExitApplicationableExampleController)),
-                                    ExampleRows(rowTitle: "StringConvertible协议", icon: "", example: .stringconvertible(exampleController: UIStoryboard.init(name: "StringConvertibleExample", bundle: nil).instantiateInitialViewController()! as! StringConvertibleExampleController))
+                                    ExampleRows(rowTitle: "StringConvertible协议", icon: "", example: .stringconvertible(exampleController: UIStoryboard.init(name: "StringConvertibleExample", bundle: nil).instantiateInitialViewController()! as! StringConvertibleExampleController)),
+                                    ExampleRows(rowTitle: "SystemAlertable协议", icon: "", example: .SystemAlertable(exampleController: UIStoryboard.init(name: "SystemAlertableExample", bundle: nil).instantiateInitialViewController()! as! SystemAlertableExampleController))
                                 ]
             ),
             ExampleSections(sectionTitle: "SBL-TBD",
@@ -78,6 +79,7 @@ internal extension ExampleDataSourceProtocol {
         case let .sandboxable(exampleController):           return exampleController as! Self.Controller
         case let .exitapplication(exampleController):       return exampleController as! Self.Controller
         case let .stringconvertible(exampleController):     return exampleController as! Self.Controller
+        case let .SystemAlertable(exampleController):       return exampleController as! Self.Controller
         }
     }
 }

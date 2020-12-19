@@ -132,6 +132,7 @@
 		F7F7DC35258C87CE0072E18F /* GetKeyWindowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DC34258C87CE0072E18F /* GetKeyWindowable.swift */; };
 		F7F7DC3C258C891D0072E18F /* Responder+sbl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DC3B258C891D0072E18F /* Responder+sbl.swift */; };
 		F7F7DC48258C89FF0072E18F /* StringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DC47258C89FF0072E18F /* StringConvertible.swift */; };
+		F7F7DCBA258DA9590072E18F /* SystemAlertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DCB9258DA9590072E18F /* SystemAlertable.swift */; };
 		F9E85548BF1EF8C5035BAF92233C34B6 /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B6D43CE5AA9C07E71CE985B2DD3556 /* RaisesException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		FF920E965F1CA016FF302DE8C92C5122 /* CwlBadInstructionException.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA278F10CCC2C84F993A0A2030A5796C /* CwlBadInstructionException.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 /* End PBXBuildFile section */
@@ -322,6 +323,7 @@
 		F7F7DC34258C87CE0072E18F /* GetKeyWindowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetKeyWindowable.swift; sourceTree = "<group>"; };
 		F7F7DC3B258C891D0072E18F /* Responder+sbl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Responder+sbl.swift"; sourceTree = "<group>"; };
 		F7F7DC47258C89FF0072E18F /* StringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertible.swift; sourceTree = "<group>"; };
+		F7F7DCB9258DA9590072E18F /* SystemAlertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAlertable.swift; sourceTree = "<group>"; };
 		FA278F10CCC2C84F993A0A2030A5796C /* CwlBadInstructionException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlBadInstructionException.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlBadInstructionException.swift; sourceTree = "<group>"; };
 		FB725459E7A00FBEA1E9700144243921 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FB9A382ECD419E545CB8C5C5396EDEDE /* Pods-SBLibrary_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SBLibrary_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -706,6 +708,7 @@
 			children = (
 				F7F7DC09258C5B8D0072E18F /* ExitApplicationable.swift */,
 				F7F7DC34258C87CE0072E18F /* GetKeyWindowable.swift */,
+				F7F7DCB9258DA9590072E18F /* SystemAlertable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -953,6 +956,7 @@
 				F7F7DBF6258C55B40072E18F /* ViewController+sbl.swift in Sources */,
 				F7F7DC0A258C5B8D0072E18F /* ExitApplicationable.swift in Sources */,
 				F7F7DBE7258C4A8F0072E18F /* String+sbl.swift in Sources */,
+				F7F7DCBA258DA9590072E18F /* SystemAlertable.swift in Sources */,
 				F7F7DC35258C87CE0072E18F /* GetKeyWindowable.swift in Sources */,
 				F7F7DB1A258B42230072E18F /* SandboxReadable.swift in Sources */,
 			);

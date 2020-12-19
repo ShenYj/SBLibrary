@@ -1,8 +1,8 @@
 //
-//  ViewController+sbl.swift
+//  Alertable.swift
 //  SBLibrary
 //
-//  Created by ShenYj on 2020/12/18.
+//  Created by ShenYj on 2020/12/19.
 //
 //  Copyright (c) 2020 ShenYj <shenyanjie123@foxmail.com>
 //
@@ -26,4 +26,28 @@
 
 import UIKit
 
-extension UIViewController: SystemAlertable { }
+public protocol SystemAlertable {
+    
+    /// 系统原生`AlertController`
+    /// - Parameters:
+    ///   - title: 标题
+    ///   - message: 描述
+    ///   - style: 样式
+    ///   - actions: 事件
+    func prepareAlert(title: String?, message: String?, style: UIAlertController.Style?, actions: [UIAlertAction]?) -> UIAlertController
+}
+
+public extension SystemAlertable {
+    
+    /// 系统原生`AlertController`
+    /// - Parameters:
+    ///   - title: 标题
+    ///   - message: 描述
+    ///   - style: 样式
+    ///   - actions: 事件
+    func prepareAlert(title: String?, message: String?, style: UIAlertController.Style? = .alert, actions: [UIAlertAction]?) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style!)
+        if let alertActions = actions { alertActions.forEach { alert.addAction($0) } }
+        return alert
+    }
+}

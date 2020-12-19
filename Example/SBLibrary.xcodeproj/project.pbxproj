@@ -25,6 +25,8 @@
 		F7F7DC65258C9BFA0072E18F /* StringConvertibleExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DC4F258C98DF0072E18F /* StringConvertibleExampleController.swift */; };
 		F7F7DC66258C9BFA0072E18F /* ExitApplicationableExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DC1B258C63470072E18F /* ExitApplicationableExampleController.swift */; };
 		F7F7DC67258C9BFA0072E18F /* SandboxReadableExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DB42258B4E7A0072E18F /* SandboxReadableExampleController.swift */; };
+		F7F7DCD5258DBED20072E18F /* SystemAlertableExample.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7F7DCD4258DBED20072E18F /* SystemAlertableExample.storyboard */; };
+		F7F7DCD9258DBEDA0072E18F /* SystemAlertableExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7DCD8258DBEDA0072E18F /* SystemAlertableExampleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		F7F7DC27258C6E460072E18F /* ExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleController.swift; sourceTree = "<group>"; };
 		F7F7DC4F258C98DF0072E18F /* StringConvertibleExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertibleExampleController.swift; sourceTree = "<group>"; };
 		F7F7DC53258C98EC0072E18F /* StringConvertibleExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StringConvertibleExample.storyboard; sourceTree = "<group>"; };
+		F7F7DCD4258DBED20072E18F /* SystemAlertableExample.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SystemAlertableExample.storyboard; sourceTree = "<group>"; };
+		F7F7DCD8258DBEDA0072E18F /* SystemAlertableExampleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemAlertableExampleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,11 +218,21 @@
 		F7F7DC59258C9A250072E18F /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				F7F7DCD3258DBEBD0072E18F /* SystemAlertableExample */,
 				F7F7DC4E258C98C50072E18F /* StringConvertibleExample */,
 				F7F7DC1A258C63380072E18F /* ExitApplicationableExample */,
 				F7F7DB3D258B4E1B0072E18F /* SandboxReadableExample */,
 			);
 			path = Examples;
+			sourceTree = "<group>";
+		};
+		F7F7DCD3258DBEBD0072E18F /* SystemAlertableExample */ = {
+			isa = PBXGroup;
+			children = (
+				F7F7DCD4258DBED20072E18F /* SystemAlertableExample.storyboard */,
+				F7F7DCD8258DBEDA0072E18F /* SystemAlertableExampleController.swift */,
+			);
+			path = SystemAlertableExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +328,7 @@
 				F7F7DB3F258B4E290072E18F /* SandboxReadableExample.storyboard in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				F7F7DC54258C98EC0072E18F /* StringConvertibleExample.storyboard in Resources */,
+				F7F7DCD5258DBED20072E18F /* SystemAlertableExample.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +434,7 @@
 			files = (
 				F7F7DC65258C9BFA0072E18F /* StringConvertibleExampleController.swift in Sources */,
 				F7F7DC66258C9BFA0072E18F /* ExitApplicationableExampleController.swift in Sources */,
+				F7F7DCD9258DBEDA0072E18F /* SystemAlertableExampleController.swift in Sources */,
 				F7F7DC67258C9BFA0072E18F /* SandboxReadableExampleController.swift in Sources */,
 				F7F7DB52258B9C500072E18F /* SandboxReadableExampleProtocol.swift in Sources */,
 				F7F7DC28258C6E460072E18F /* ExampleController.swift in Sources */,

@@ -28,4 +28,10 @@ internal enum Example {
     /// - Note: 通过遵循`StringConvertible`协议,  为`String`提供额外属性来实现`空格`、`\n 换行符`的处理
     ///
     case stringconvertible(exampleController: StringConvertibleExampleController)
+    
+    /// `SystemAlertable` 协议
+    ///
+    /// - Note: 通过遵循`SystemAlertable`协议,  系统原生`AlertController`
+    ///
+    case SystemAlertable(exampleController: SystemAlertableExampleController)
 }
