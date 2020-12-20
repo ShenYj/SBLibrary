@@ -20,6 +20,21 @@ it, simply add the following line to your Podfile:
 pod 'SBLibrary'
 ```
 
+## Use
+
+- `protocol`
+
+    [x] `SandboxReadable`  
+    [x] `StringConvertible`
+
+    [x] `ExitApplicationable`  
+    [x] `GetKeyWindowable`  
+    [x] `SystemAlertable`  
+
+- `Extension`
+
+    [x] `FileManager`
+
 ## Author
 
 ShenYj, shenyanjie123@foxmail.com
