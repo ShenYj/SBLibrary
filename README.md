@@ -24,16 +24,16 @@ pod 'SBLibrary'
 
 - `protocol`
 
-    [x] `SandboxReadable`  
-    [x] `StringConvertible`
+  - [x] `SandboxReadable`  
+  - [x] `StringConvertible`
 
-    [x] `ExitApplicationable`  
-    [x] `GetKeyWindowable`  
-    [x] `SystemAlertable`  
+  - [x] `ExitApplicationable`  
+  - [x] `GetKeyWindowable`  
+  - [x] `SystemAlertable`  
 
 - `Extension`
 
-    [x] `FileManager`
+  - [x] `FileManager`
 
 ## Author
 
