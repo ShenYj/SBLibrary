@@ -76,10 +76,10 @@ internal extension ExampleDataSourceProtocol {
     /// 获取指定`section`的指定`rows`获得 example 控制器
     subscript(section: Int, row: Int) -> Controller {
         switch self[section, row].example {
-        case let .sandboxable(exampleController):           return exampleController as! Self.Controller
-        case let .exitapplication(exampleController):       return exampleController as! Self.Controller
-        case let .stringconvertible(exampleController):     return exampleController as! Self.Controller
-        case let .SystemAlertable(exampleController):       return exampleController as! Self.Controller
+        case let .sandboxable(exampleController):               return exampleController as! Self.Controller
+        case let .exitapplication(exampleController):           return exampleController as! Self.Controller
+        case let .stringconvertible(exampleController):         return exampleController as! Self.Controller
+        case let .SystemAlertable(exampleController):           return exampleController as! Self.Controller
         }
     }
 }
