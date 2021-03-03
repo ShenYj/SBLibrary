@@ -41,6 +41,7 @@ TODO: Add long description of the pod here.
   s.subspec "UI" do |ss|
     ss.source_files = ['SBLibrary/Classes/UI', 'SBLibrary/Classes/UI/Protocol']
     ss.framework  = "UIKit"
+    #ss.dependency "SBLibrary/Core"
   end
   
   # s.resource_bundles = {

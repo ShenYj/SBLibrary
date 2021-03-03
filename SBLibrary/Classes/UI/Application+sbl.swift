@@ -27,4 +27,3 @@
 import UIKit
 
 extension UIApplication: ExitApplicationable { }
-extension UIApplication: ApplicationSetable { }
