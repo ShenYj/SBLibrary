@@ -33,5 +33,11 @@ internal enum Example {
     ///
     /// - Note: 通过遵循`SystemAlertable`协议,  系统原生`AlertController`
     ///
-    case SystemAlertable(exampleController: SystemAlertableExampleController)
+    case systemAlertable(exampleController: SystemAlertableExampleController)
+    
+    /// `ApplicationSetable`协议
+    ///
+    /// - Note: 通过遵循`ApplicationSetable`协议, 支持打开当前`App`系统设置页面
+    ///
+    case applicationSetable(exampleController: ApplicationSetableExampleController)
 }

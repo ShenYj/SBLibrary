@@ -1,10 +1,10 @@
 //
-//  Application+sbl.swift
+//  AuthoritySettingable.swift
 //  SBLibrary
 //
-//  Created by ShenYj on 2020/12/18.
+//  Created by ShenYj on 2021/03/03.
 //
-//  Copyright (c) 2020 ShenYj <shenyanjie123@foxmail.com>
+//  Copyright (c) 2021 ShenYj <shenyanjie123@foxmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,29 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import UIKit
+public protocol ApplicationSetable {
+    
+    /// 打开`App`系统设置页
+    ///
+    /// - Returns: `URL(string: UIApplication.openSettingsURLString)`转`URL`失败时返回`false`
+    ///
+    @discardableResult
+    func openAppSettingPage(options: [UIApplication.OpenExternalURLOptionsKey: Any], completionHandler: ((Bool) -> Void)?) -> Bool
+}
 
-extension UIApplication: ExitApplicationable { }
-extension UIApplication: ApplicationSetable { }
+
+public extension ApplicationSetable {
+    
+    /// 打开`App`系统设置页
+    ///
+    /// - Note: 不处理回调
+    ///
+    @discardableResult
+    func openAppSettingPage(options: [UIApplication.OpenExternalURLOptionsKey: Any] = [UIApplication.OpenExternalURLOptionsKey.universalLinksOnly: false],
+                            completionHandler: ((Bool) -> Void)? = nil) -> Bool {
+        guard let systemURL = URL(string: UIApplication.openSettingsURLString) else { return false }
+        UIApplication.shared.open(systemURL, options: options, completionHandler: completionHandler)
+        return true
+    }
+    
+}

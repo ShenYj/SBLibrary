@@ -42,7 +42,8 @@ internal extension ExampleDataSourceProtocol {
             ExampleSections(sectionTitle: "SBL-Foundation 基础扩展",
                             rows:
                                 [
-                                    ExampleRows(rowTitle: "SandboxReadable协议", icon: "", example: .sandboxable(exampleController: UIStoryboard.init(name: "SandboxReadableExample", bundle: nil).instantiateInitialViewController()! as! SandboxReadableExampleController))
+                                    ExampleRows(rowTitle: "SandboxReadable协议", icon: "", example: .sandboxable(exampleController: UIStoryboard.init(name: "SandboxReadableExample", bundle: nil).instantiateInitialViewController()! as! SandboxReadableExampleController)),
+                                    ExampleRows(rowTitle: "ApplicationSetable协议", icon: "", example: .applicationSetable(exampleController: UIStoryboard.init(name: "ApplicationSetableExample", bundle: nil).instantiateInitialViewController()! as! ApplicationSetableExampleController))
                                 ]
             ),
             ExampleSections(sectionTitle: "SBL-UIKit 扩展",
@@ -50,7 +51,7 @@ internal extension ExampleDataSourceProtocol {
                                 [
                                     ExampleRows(rowTitle: "ExitApplicationable协议", icon: "", example: .exitapplication(exampleController: UIStoryboard.init(name: "ExitApplicationableExample", bundle: nil).instantiateInitialViewController()! as! ExitApplicationableExampleController)),
                                     ExampleRows(rowTitle: "StringConvertible协议", icon: "", example: .stringconvertible(exampleController: UIStoryboard.init(name: "StringConvertibleExample", bundle: nil).instantiateInitialViewController()! as! StringConvertibleExampleController)),
-                                    ExampleRows(rowTitle: "SystemAlertable协议", icon: "", example: .SystemAlertable(exampleController: UIStoryboard.init(name: "SystemAlertableExample", bundle: nil).instantiateInitialViewController()! as! SystemAlertableExampleController))
+                                    ExampleRows(rowTitle: "SystemAlertable协议", icon: "", example: .systemAlertable(exampleController: UIStoryboard.init(name: "SystemAlertableExample", bundle: nil).instantiateInitialViewController()! as! SystemAlertableExampleController))
                                 ]
             ),
             ExampleSections(sectionTitle: "SBL-TBD",
@@ -79,7 +80,8 @@ internal extension ExampleDataSourceProtocol {
         case let .sandboxable(exampleController):               return exampleController as! Self.Controller
         case let .exitapplication(exampleController):           return exampleController as! Self.Controller
         case let .stringconvertible(exampleController):         return exampleController as! Self.Controller
-        case let .SystemAlertable(exampleController):           return exampleController as! Self.Controller
+        case let .systemAlertable(exampleController):           return exampleController as! Self.Controller
+        case let .applicationSetable(exampleController):        return exampleController as! Self.Controller
         }
     }
 }
