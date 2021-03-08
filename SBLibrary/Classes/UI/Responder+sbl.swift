@@ -27,3 +27,4 @@
 import UIKit
 
 extension UIResponder: GetKeyWindowable { }
+extension UIResponder: GetTopViewControllerable { }
